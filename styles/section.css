@@ -1,0 +1,359 @@
+/*========= Custom Color =======*/
+
+#services .card circle{
+  fill: var(--brand-light);
+}
+
+#navigation .logo path[fill*="#00856F"],
+#backToTopButton circle{
+  fill: var(--primary-color);
+}
+
+button.open-menu path[stroke*="#00856F"],
+#contact li path{
+  stroke: var(--primary-color);
+}
+
+body.menu-expanded #navigation .logo path,
+#navigation.scroll .logo path{
+  fill: white;
+}
+
+#navigation.scroll button.open-menu path[stroke*="#00856F"]{
+  stroke: white;
+}
+
+/*======= Navigation ==========*/
+nav{
+  display: flex;
+
+  height: var(--nav-height);
+
+  position: fixed;
+  top: 0;
+  width: 100vw;
+
+  z-index: 11;
+}
+
+nav .wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav.scroll{
+  background: var(--primary-color);
+}
+
+nav button{
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+nav .menu,
+nav .close-menu{
+  position: fixed;
+}
+
+/*=========== Header ============*/
+
+#home{
+  padding-block: 0;
+  padding-top: calc(4.1rem + var(--nav-height));
+}
+
+#home::before{
+  content: "";
+  width: 100%;
+  height: calc(75% + var(--nav-height));
+  background-color: var(--brand-light);
+  display: block;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+#home .button{
+  margin: 0 auto;
+}
+
+#home h4{
+  margin-bottom: 1.6rem;
+}
+
+#home h1{
+  margin-bottom: 2.4rem;
+}
+
+#home p{
+  font-size: 1.8rem;
+  color: var(--paragraph);
+  font-weight: 400;
+
+  margin-bottom: 3.2rem;
+}
+
+#home img{
+  width: 26rem;
+  display: block;
+  margin-inline: auto;
+  object-position: 0 2rem;
+}
+
+#home .stats{
+  width: 100%;
+  padding-block: 4rem;
+  margin-inline: auto;
+
+  background-color: var(--brand-beige);
+  border: 1px solid var(--brand-light);
+  border-radius: 0.6rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6rem;
+}
+
+.stat h3{
+  font-size: 4.8rem;
+  color: var(--headline);
+  line-height: 130%;
+
+  margin-bottom: 0.4rem;
+}
+
+.stat p{
+  margin: 0;
+  color: var(--primary-color);
+  font-size: 1.6rem;
+  line-height: 150%;
+}
+
+/*======== MENU-EXPANDED ===============*/
+body.menu-expanded{
+  overflow: hidden;
+}
+
+body.menu-expanded > :not(nav){
+  visibility: hidden;
+}
+
+.menu,
+.close-menu,
+body.menu-expanded .open-menu{
+  opacity: 0;
+  visibility: hidden;
+}
+
+body.menu-expanded .menu,
+body.menu-expanded .close-menu{
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu{
+  transform: translateY(100%);
+}
+
+body.menu-expanded .menu{
+  top: 0;
+  left: 0;
+  background: var(--primary-color);
+
+  width: 100vw;
+  height: 100vh;
+
+  padding-top: var(--nav-height);
+
+  transition: transform 300ms;
+
+  transform: translatey(0%);
+}
+
+.menu ul:nth-child(1){
+  display: flex;
+  flex-direction: column;
+  gap: 4.8rem;
+
+  margin-top: 6rem;
+
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 3.1rem;
+}
+
+.menu ul li a{
+  color: white;
+  text-decoration: none;
+}
+
+.menu .button{
+  background: white;
+  border-radius: 4rem;
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 2.3rem;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  color: var(--primary-color);
+
+  display: inline-block;
+  padding: 1.6rem 3.2rem;
+  margin-top: 4.8rem;
+  margin-bottom: 8rem;
+}
+
+.menu .button:hover{
+  background-color: var(--primary-color);
+  color: white;
+  filter: brightness(1.2);
+}
+
+body.menu-expanded .logo,
+body.menu-expanded button{
+  position: relative;
+  z-index: 10;
+}
+
+body.menu-expanded .logo path{
+  fill: white;
+}
+
+body.menu-expanded button path{
+  stroke: white;
+}
+
+/*========= SERVICES ==============*/
+
+#services header h4{
+  font-size: 1.4rem;
+  line-height: 150%;
+  letter-spacing: 0.08rem;
+
+  color: var(--primary-color);
+
+  text-transform: uppercase;
+
+  margin-bottom: 1.6rem;
+}
+
+#services header h2{
+  margin-bottom: 6rem;
+}
+
+#services .cards{
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+#services .card{
+  padding: 2.4rem;
+  text-align: left;
+
+  background: white;
+
+  border: 1px solid var(--brand-light);
+  border-radius: 0.6rem;
+}
+
+#services .card h3{
+  margin-block: 1.6rem;
+}
+
+/*============= ABOUT =================*/
+#about{
+  text-align: left;
+  background-color: var(--brand-beige);
+}
+
+#about header h2{
+  margin-bottom: 2.4rem;
+}
+
+#about .content p{
+  margin-top: 2.4rem;
+  margin-bottom: 6rem;
+}
+
+/*============= DEPOSITIONS =================*/
+#depositions header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6rem;
+
+  margin-bottom: 6rem;
+}
+
+#depositions .cards{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3.2rem;
+
+  margin-bottom: 4.9rem;
+}
+
+#depositions .card{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  padding: 3.2rem;
+  gap: 2rem;
+
+  background-color: white;
+  border: 1px solid var(--brand-light);
+}
+
+#depositions .brandsTrust{
+  margin-top: 5rem;
+}
+
+#depositions h3{
+  font-size: 2.4rem;
+  line-height: 3.125rem;
+  
+  margin-bottom: 4.8rem;
+}
+#depositions .brands {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+/*============= CONTACT =================*/
+
+#contact{
+  text-align: left;
+  background-color: var(--brand-beige);
+}
+
+#contact header{
+  margin-bottom: 3.2rem;
+}
+
+#contact ul{
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+
+  margin-bottom: 3.2rem;
+}
+
+#contact ul li{
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
