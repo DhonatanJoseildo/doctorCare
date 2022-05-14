@@ -78,5 +78,19 @@ ScrollReveal({
 #about header,
 #about .content,
 #depositions,
-#depositions header,
-#depositions .card`);
+#depositions header`);
+
+// Depositions (Depoimentos)
+document.getElementById("radio01").checked = true;
+
+function nextDepositions() {
+
+  if (this.radio01.checked == true) {
+    document.getElementById("radio02").checked = true;
+  }else if (this.radio02.checked == true) {
+    document.getElementById("radio03").checked = true;
+  }else{
+    document.getElementById("radio01").checked = true;
+  }
+
+}

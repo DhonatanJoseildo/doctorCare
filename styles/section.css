@@ -295,11 +295,15 @@ body.menu-expanded button path{
 
 #depositions .cards{
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 3.2rem;
 
+
+  width: 100%;
+  position: relative;
   margin-bottom: 4.9rem;
 }
 
@@ -320,6 +324,7 @@ body.menu-expanded button path{
   margin-top: 5rem;
 }
 
+
 #depositions h3{
   font-size: 2.4rem;
   line-height: 3.125rem;
@@ -332,6 +337,92 @@ body.menu-expanded button path{
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
+}
+
+#depositions .content.slider{
+  margin: 0 auto;
+  width: 27.2rem;
+  height: 40rem;
+  overflow: hidden;
+}
+
+#depositions .content .slides{
+  width: 300%;
+  height: 40rem;
+  display: flex;
+}
+#depositions .content .slides input{
+display: none;
+}
+
+#depositions .content .card.slide{
+  width: 27.2rem;
+  height: 40rem;
+  position: relative;
+  transition: margin-left 1s;
+}
+
+#depositions .content .navigation-manual-slider{
+  position: absolute;
+  width: 27.2rem;
+  margin-top: -4rem;
+  display: flex;
+  justify-content: center;
+}
+
+#depositions .navigation-manual-slider .manual-btn{
+  border: 1px solid black;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: 1s;
+}
+
+#depositions .navigation-manual-slider .manual-btn:not(:last-child){
+  margin-right: 4rem;
+}
+
+#depositions .navigation-manual-slider .manual-btn:hover{
+  background-color: var(--primary-color);
+}
+
+#depositions #radio01:checked ~ .card.slide.first{
+  margin-left: 0%;
+}
+
+#depositions #radio02:checked ~ .card.slide.first{
+  margin-left: -33.33%;
+}
+
+#depositions #radio03:checked ~ .card.slide.first{
+  margin-left: -66.66%;
+}
+
+#depositions .auto-navigation-slide div{
+  border: 1px solid black;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: 1s;
+}
+#depositions .auto-navigation-slide{
+  position: absolute;
+  width: 27.2rem;
+  margin-top: 36rem;
+  display: flex;
+  justify-content: center;
+}
+#depositions .auto-navigation-slide div:not(:last-child){
+  margin-right: 4rem;
+}
+#depositions #radio01:checked ~ .auto-navigation-slide .auto-btn01{
+  background-color: var(--primary-color);
+}
+#depositions #radio02:checked ~ .auto-navigation-slide .auto-btn02{
+  background-color: var(--primary-color);
+}
+#depositions #radio03:checked ~ .auto-navigation-slide .auto-btn03{
+  background-color: var(--primary-color);
 }
 /*============= CONTACT =================*/
 

@@ -230,19 +230,22 @@
     margin-bottom: 0;
   }
 
-  /*=========== CONTACT ============*/
-  #depositions .content .cards{
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
-  #depositions .cards .card{
-    width: 40%;
-    flex-grow: 1;
-  }
+  /*=========== DEPOSITIONS ============*/
 
   #depositions .brands{
     flex-direction: row;
+  }
+  #depositions .content.slider{
+    width: 60rem;
+  }
+  #depositions .content .card.slide{
+    width: 60rem;
+  }
+  #depositions .content .navigation-manual-slider{
+    width: 60rem;
+  }
+  #depositions .auto-navigation-slide{
+    width: 60rem;
   }
   /*=========== CONTACT ============*/
 
