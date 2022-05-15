@@ -81,6 +81,9 @@ ScrollReveal({
 #depositions header`);
 
 // Depositions (Depoimentos)
+setInterval(function(){
+  nextDepositions()
+}, 5000)
 document.getElementById("radio01").checked = true;
 
 function nextDepositions() {
