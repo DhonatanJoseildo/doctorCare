@@ -1,30 +1,30 @@
 /*========= Custom Color =======*/
 
-#services .card circle{
+#services .card circle {
   fill: var(--brand-light);
 }
 
-#navigation .logo path[fill*="#00856F"],
-#backToTopButton circle{
+#navigation .logo path[fill*='#00856F'],
+#backToTopButton circle {
   fill: var(--primary-color);
 }
 
-button.open-menu path[stroke*="#00856F"],
-#contact li path{
+button.open-menu path[stroke*='#00856F'],
+#contact li path {
   stroke: var(--primary-color);
 }
 
 body.menu-expanded #navigation .logo path,
-#navigation.scroll .logo path{
+#navigation.scroll .logo path {
   fill: white;
 }
 
-#navigation.scroll button.open-menu path[stroke*="#00856F"]{
+#navigation.scroll button.open-menu path[stroke*='#00856F'] {
   stroke: white;
 }
 
 /*======= Navigation ==========*/
-nav{
+nav {
   display: flex;
 
   height: var(--nav-height);
@@ -36,36 +36,36 @@ nav{
   z-index: 11;
 }
 
-nav .wrapper{
+nav .wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-nav.scroll{
+nav.scroll {
   background: var(--primary-color);
 }
 
-nav button{
+nav button {
   background: none;
   border: none;
   cursor: pointer;
 }
 
 nav .menu,
-nav .close-menu{
+nav .close-menu {
   position: fixed;
 }
 
 /*=========== Header ============*/
 
-#home{
+#home {
   padding-block: 0;
   padding-top: calc(4.1rem + var(--nav-height));
 }
 
-#home::before{
-  content: "";
+#home::before {
+  content: '';
   width: 100%;
   height: calc(75% + var(--nav-height));
   background-color: var(--brand-light);
@@ -77,19 +77,19 @@ nav .close-menu{
   z-index: -1;
 }
 
-#home .button{
+#home .button {
   margin: 0 auto;
 }
 
-#home h4{
+#home h4 {
   margin-bottom: 1.6rem;
 }
 
-#home h1{
+#home h1 {
   margin-bottom: 2.4rem;
 }
 
-#home p{
+#home p {
   font-size: 1.8rem;
   color: var(--paragraph);
   font-weight: 400;
@@ -97,14 +97,14 @@ nav .close-menu{
   margin-bottom: 3.2rem;
 }
 
-#home img{
+#home img {
   width: 26rem;
   display: block;
   margin-inline: auto;
   object-position: 0 2rem;
 }
 
-#home .stats{
+#home .stats {
   width: 100%;
   padding-block: 4rem;
   margin-inline: auto;
@@ -119,7 +119,7 @@ nav .close-menu{
   gap: 6rem;
 }
 
-.stat h3{
+.stat h3 {
   font-size: 4.8rem;
   color: var(--headline);
   line-height: 130%;
@@ -127,7 +127,7 @@ nav .close-menu{
   margin-bottom: 0.4rem;
 }
 
-.stat p{
+.stat p {
   margin: 0;
   color: var(--primary-color);
   font-size: 1.6rem;
@@ -135,32 +135,32 @@ nav .close-menu{
 }
 
 /*======== MENU-EXPANDED ===============*/
-body.menu-expanded{
+body.menu-expanded {
   overflow: hidden;
 }
 
-body.menu-expanded > :not(nav){
+body.menu-expanded > :not(nav) {
   visibility: hidden;
 }
 
 .menu,
 .close-menu,
-body.menu-expanded .open-menu{
+body.menu-expanded .open-menu {
   opacity: 0;
   visibility: hidden;
 }
 
 body.menu-expanded .menu,
-body.menu-expanded .close-menu{
+body.menu-expanded .close-menu {
   opacity: 1;
   visibility: visible;
 }
 
-.menu{
+.menu {
   transform: translateY(100%);
 }
 
-body.menu-expanded .menu{
+body.menu-expanded .menu {
   top: 0;
   left: 0;
   background: var(--primary-color);
@@ -175,7 +175,7 @@ body.menu-expanded .menu{
   transform: translatey(0%);
 }
 
-.menu ul:nth-child(1){
+.menu ul:nth-child(1) {
   display: flex;
   flex-direction: column;
   gap: 4.8rem;
@@ -187,12 +187,12 @@ body.menu-expanded .menu{
   line-height: 3.1rem;
 }
 
-.menu ul li a{
+.menu ul li a {
   color: white;
   text-decoration: none;
 }
 
-.menu .button{
+.menu .button {
   background: white;
   border-radius: 4rem;
   font-weight: 700;
@@ -209,29 +209,29 @@ body.menu-expanded .menu{
   margin-bottom: 8rem;
 }
 
-.menu .button:hover{
+.menu .button:hover {
   background-color: var(--primary-color);
   color: white;
   filter: brightness(1.2);
 }
 
 body.menu-expanded .logo,
-body.menu-expanded button{
+body.menu-expanded button {
   position: relative;
   z-index: 10;
 }
 
-body.menu-expanded .logo path{
+body.menu-expanded .logo path {
   fill: white;
 }
 
-body.menu-expanded button path{
+body.menu-expanded button path {
   stroke: white;
 }
 
 /*========= SERVICES ==============*/
 
-#services header h4{
+#services header h4 {
   font-size: 1.4rem;
   line-height: 150%;
   letter-spacing: 0.08rem;
@@ -243,17 +243,17 @@ body.menu-expanded button path{
   margin-bottom: 1.6rem;
 }
 
-#services header h2{
+#services header h2 {
   margin-bottom: 6rem;
 }
 
-#services .cards{
+#services .cards {
   display: flex;
   flex-direction: column;
   gap: 3.2rem;
 }
 
-#services .card{
+#services .card {
   padding: 2.4rem;
   text-align: left;
 
@@ -262,28 +262,31 @@ body.menu-expanded button path{
   border: 1px solid var(--brand-light);
   border-radius: 0.6rem;
 }
+#services .card:hover {
+  box-shadow: 2px 2px 5px var(--primary-color);
+}
 
-#services .card h3{
+#services .card h3 {
   margin-block: 1.6rem;
 }
 
 /*============= ABOUT =================*/
-#about{
+#about {
   text-align: left;
   background-color: var(--brand-beige);
 }
 
-#about header h2{
+#about header h2 {
   margin-bottom: 2.4rem;
 }
 
-#about .content p{
+#about .content p {
   margin-top: 2.4rem;
   margin-bottom: 6rem;
 }
 
 /*============= DEPOSITIONS =================*/
-#depositions header{
+#depositions header {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -293,21 +296,7 @@ body.menu-expanded button path{
   margin-bottom: 6rem;
 }
 
-#depositions .cards{
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 3.2rem;
-
-
-  width: 100%;
-  position: relative;
-  margin-bottom: 4.9rem;
-}
-
-#depositions .card{
+#depositions .card {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -318,51 +307,44 @@ body.menu-expanded button path{
 
   background-color: white;
   border: 1px solid var(--brand-light);
+  border-radius: 0.6rem;
 }
 
-#depositions .brandsTrust{
-  margin-top: 5rem;
-}
-
-
-#depositions h3{
+#depositions h3 {
   font-size: 2.4rem;
   line-height: 3.125rem;
-  
+
   margin-bottom: 4.8rem;
 }
-#depositions .brands {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-}
 
-#depositions .content.slider{
+#depositions .content.slider {
   margin: 0 auto;
   width: 27.2rem;
   height: 40rem;
   overflow: hidden;
+  
+  border-radius: 0.6rem;
 }
-
-#depositions .content .slides{
+#depositions .content.slider:hover{
+  box-shadow: 2px 2px 5px var(--primary-color);
+}
+#depositions .content .slides {
   width: 300%;
   height: 40rem;
   display: flex;
 }
-#depositions .content .slides input{
-display: none;
+#depositions .content .slides input {
+  display: none;
 }
 
-#depositions .content .card.slide{
+#depositions .content .card.slide {
   width: 27.2rem;
   height: 40rem;
   position: relative;
   transition: margin-left 1s;
 }
 
-#depositions .content .navigation-manual-slider{
+#depositions .content .navigation-manual-slider {
   position: absolute;
   width: 27.2rem;
   margin-top: -4rem;
@@ -370,7 +352,7 @@ display: none;
   justify-content: center;
 }
 
-#depositions .navigation-manual-slider .manual-btn{
+#depositions .navigation-manual-slider .manual-btn {
   border: 1px solid black;
   padding: 0.5rem;
   border-radius: 1rem;
@@ -378,64 +360,82 @@ display: none;
   transition: 1s;
 }
 
-#depositions .navigation-manual-slider .manual-btn:not(:last-child){
+#depositions .navigation-manual-slider .manual-btn:not(:last-child) {
   margin-right: 4rem;
 }
 
-#depositions .navigation-manual-slider .manual-btn:hover{
+#depositions .navigation-manual-slider .manual-btn:hover {
   background-color: var(--primary-color);
 }
 
-#depositions #radio01:checked ~ .card.slide.first{
+#depositions #radio01:checked ~ .card.slide.first {
   margin-left: 0%;
 }
 
-#depositions #radio02:checked ~ .card.slide.first{
+#depositions #radio02:checked ~ .card.slide.first {
   margin-left: -33.33%;
 }
 
-#depositions #radio03:checked ~ .card.slide.first{
+#depositions #radio03:checked ~ .card.slide.first {
   margin-left: -66.66%;
 }
 
-#depositions .auto-navigation-slide div{
+#depositions .auto-navigation-slide div {
   border: 1px solid black;
   padding: 0.5rem;
   border-radius: 1rem;
   cursor: pointer;
   transition: 1s;
 }
-#depositions .auto-navigation-slide{
+#depositions .auto-navigation-slide {
   position: absolute;
   width: 27.2rem;
   margin-top: 36rem;
   display: flex;
   justify-content: center;
 }
-#depositions .auto-navigation-slide div:not(:last-child){
+#depositions .auto-navigation-slide div:not(:last-child) {
   margin-right: 4rem;
 }
-#depositions #radio01:checked ~ .auto-navigation-slide .auto-btn01{
+#depositions #radio01:checked ~ .auto-navigation-slide .auto-btn01 {
   background-color: var(--primary-color);
 }
-#depositions #radio02:checked ~ .auto-navigation-slide .auto-btn02{
+#depositions #radio02:checked ~ .auto-navigation-slide .auto-btn02 {
   background-color: var(--primary-color);
 }
-#depositions #radio03:checked ~ .auto-navigation-slide .auto-btn03{
+#depositions #radio03:checked ~ .auto-navigation-slide .auto-btn03 {
   background-color: var(--primary-color);
+}
+
+#depositions .brandsTrust {
+  margin-top: 5rem;
+}
+
+#depositions .brands {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+#depositions .brands path {
+  fill: var(--primary-color);
+}
+#depositions .brands .linkedin path:last-child {
+  fill: white;
 }
 /*============= CONTACT =================*/
 
-#contact{
+#contact {
   text-align: left;
   background-color: var(--brand-beige);
 }
 
-#contact header{
+#contact header {
   margin-bottom: 3.2rem;
 }
 
-#contact ul{
+#contact ul {
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
@@ -443,7 +443,7 @@ display: none;
   margin-bottom: 3.2rem;
 }
 
-#contact ul li{
+#contact ul li {
   display: flex;
   align-items: center;
   gap: 0.8rem;
